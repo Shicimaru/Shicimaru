@@ -1,0 +1,26 @@
+<script>
+    function cekout(){
+      var nama = document.getElementById('namamu');
+      var nomor = document.getElementById('nmrhp');
+      var alamat = document.getElementById('alamatleng');
+  
+      if (harusDiisi(nama, "harap periksa pesanan anda")) {
+        if (harusDiisi(nomor, "harap periksa pesanan anda")) {
+          if (harusDiisi(alamat, "harap periksa pesanan anda")) {
+            return true;
+          };
+        };
+      };
+      return false;
+    }
+  
+    function harusDiisi(att, msg){
+      if (att.value.length == 0) {
+        alert(msg);
+        att.focus();
+        return false;
+      }
+  
+      return true;
+    }
+  </script>

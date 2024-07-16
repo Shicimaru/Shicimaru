@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form id="absensi" onsubmit="return validasi()" action="simpan.php" method="post">
+		<p>NIM:</p><input type="text" name="nim" id="nim"/><br/>
+		<p>Nama:</p><input type="text" name="nama" id="nama"/><br/>
+		<p>Kelas:</p><input type="text" name="kelas" id="kelas"/><br/>
+		<input type="submit" value="Simpan" maxlength="100"/>
+	</form>
+
+	<script>
+		function validasi(){
+			var nim = document.getElementById('nim');
+			var nama = document.getElementById('nama');
+			var kelas = document.getElementById('kelas');
+
+			if (harusDiisi(nim, "nim belum diisi")) {
+				if (harusDiisi(nama, "nama belum diisi")) {
+					if (harusDiisi(kelas, "kelas belum diisi")) {
+						return true;
+					};
+				};
+			};
+			return false;
+		}
+
+		function harusDiisi(att, msg){
+			if (att.value.length == 0) {
+				alert(msg);
+				att.focus();
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+
+</body>
+</html>

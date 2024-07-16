@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- google -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP8ZjfvgE5YzqkexqT9n5G-T29ZO20Rdc&libraries=geometry,places&callback=initMap">
+    </script>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>DAPUR SODARA</title>
+  </head>
+
+
+  <body>
+  <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top" style="background: black;">
+        <div class="container">
+        <a class="navbar-brand text-white"><img src="images/dapurlogo.png" alt="logo">
+          <strong>DAPUR SODARA</strong></a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mr-4" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-4" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-4" href="#menu">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-4" href="#kontak">KONTAK</a>
+            </li>
+          </ul>
+      </nav><br><br>
+  <!-- Akhir Navbar -->
+
+ <!-- home -->
+  <home>
+      <div class="section__container home__container">
+        <div class="home__image">
+          <img src="images/one.jpg" alt="..."/>
+          <img src="images/two.jpg" alt="..."/>
+        </div>
+        <div class="home__content" style="color: silver">
+          <div>
+            <div class="clock">
+              <div class="display">
+        </div>
+        </div>
+        <script>
+              setInterval(function(){
+                const clock = document.querySelector(".display");
+                let time = new Date();
+                let sec = time.getSeconds();
+                let min = time.getMinutes();
+                let hr = time.getHours();
+                let day = 'AM';
+                if(hr > 12){
+                  day = 'PM';
+                  hr = hr - 12;
+                }
+                if(hr == 0){
+                  hr = 12;
+                }
+                if(sec < 10){
+                  sec = '0' + sec;
+                }
+                if(min < 10){
+                  min = '0' + min;
+                }
+                if(hr < 10){
+                  hr = '0' + hr;
+                }
+                clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+              });
+            </script>
+            <h1>Welcome to Dapur Sodara Website 😊 </h1>
+            <p class="section__subtitle">
+              Jika anda punya masalah hidup, itu urusan anda. 
+              tapi jika anda lapar itu urusan kami. <br> 
+              Buka tiap hari 08:00 - 20:00
+            </p>
+            </div>
+          </div>
+      </div>
+    </home>
+ <!-- home -->
+
+<!-- about -->
+ <section class="about" id="about">
+  <div class="main2">
+    <div class="about-text text-justify">
+      <h2>About</h2>
+      <h2>Dapur Sodara</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warung makan Dapur Sodara merupakan warung makan 
+        yang berada di kelurahan Poyowa besar, Kotamobagu selatan, Kotamobagu, tepatnya 
+        di Jalan Purois Poyowa besar. Warung makan ini sendiri merupakan usaha turun 
+        temurun  yang pertama kali di dirikan oleh Ibu Nu Udeng tahun 1994. Kala itu
+        masih berupa kantin kecil dengan menu andalannya yaitu Mie khas Bolaang Mongondow 
+        atau kebanyakan orang menyebutnya “Mie Ojo”. Beliau  wafat pada tahun 1996 
+        setelah dua tahun merinti usaha warung makan. Kemudian usaha warung makan tersebut 
+        di teruskan oleh anak kedua beliau yang bernama ibu Saira Dayo dari tahun 1996-2010.
+        Di tahun 2010 ibu Saira Dayo beralih usaha dari warung makan ke makanan ketring. 
+        Dan untuk warung makan sendiri di teruskan oleh anak bungsu ibu Nu Udeng yang 
+        bernama Ibu Yemi Dayo.</p>
+    </div>
+    <img src="images/dapurlogo.png">
+  </div>
+ </section><br>
+<!-- about -->
+
+
+<!-- menu -->
+<div class="menuzz" id="menu">
+  <section class="menu top">
+    <div class="container">
+      <div class="heading">   
+        <h2>MENU</h2>
+        <P>Sesuai Selera</P>
+      </div>
+      <div class="d-flex justify-content-around">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img src="new menu/nasi goreng.jpg" alt="...">
+            <h5 class="card-title">Nasi Goreng<br>
+            Rp.13.000</h5>
+            <input class="form-check-input" type="checkbox" value="" id="nasigoreng">                                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Centang Untuk beli</label>
+            <input type="number" class="form-control" id="jumlah1" placeholder="input jumlah" min="1" oninput="validateInput(this)" >
+          </div>
+        </div>
+<!-- menu -->
+
+
+
+
+
+
+
+
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img src="new menu/nasi kuning.jpg" alt="...">
+            <h5 class="card-title">Nasi Kuning<br>
+            Rp.12.000</h5>
+            <input class="form-check-input" type="checkbox" value="" id="nasikuning">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Centang Untuk beli</label>
+            <input type="number" class="form-control" id="jumlah2" placeholder="input jumlah">
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img src="new menu/mie bakso.jpg" alt="...">
+            <h5 class="card-title">Mie Bakso<br>
+            Rp.13.000</h5>
+            <input class="form-check-input" type="checkbox" value="" id="miebakso">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Centang Untuk beli</label>
+            <input type="number" class="form-control" id="jumlah3" placeholder="input jumlah">
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img src="new menu/mie ojo.jpg" alt="...">
+            <h5 class="card-title">Mie Ojo<br>
+            Rp.5.000</h5>
+            <input class="form-check-input" type="checkbox" value="" id="mieojo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Centang Untuk beli</label>
+            <input type="number" class="form-control" id="jumlah4" placeholder="input jumlah">
+          </div>
+        </div>
+      </div>
+    </div>
+
+<br><br>
+<br><br>
+    <section class="menu top">
+      <div class="container">
+        <div class="d-flex justify-content-around">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/ikan sapi.png" alt="...">
+              <h5 class="card-title">Ikan Sapi<br>
+              Rp.200.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="ikansapi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah5" placeholder="input jumlah">
+            </div>
+          </div>
+  
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/ikan mujair saus.png" alt="...">
+              <h5 class="card-title">Mujair Bakar<br>
+              Rp.200.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="ikanmujairbakar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah6" placeholder="input jumlah">
+            </div>
+          </div>
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/sate ayam.png" alt="...">
+              <h5 class="card-title">Sate Ayam<br>
+              Rp.200.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="sateayam">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah7" placeholder="input jumlah">
+            </div>
+          </div>
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/telur saus.png" alt="...">
+              <h5 class="card-title">Telur Saus<br>
+              Rp.150.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="telursaus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah8" placeholder="input jumlah">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+      <br><br>
+    <section class="menu top">
+      <div class="container">
+        <div class="d-flex justify-content-around">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/kopi hitam.jpg" alt="...">
+              <h5 class="card-title">Kopi Hitam<br>
+              Rp.5.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="kopihitam">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah9" placeholder="input jumlah">
+            </div>
+          </div>
+  
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/teh manis.jpg" alt="...">
+              <h5 class="card-title">Teh Manis<br>
+              Rp.5.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="tehmanis">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah10" placeholder="input jumlah">
+            </div>
+          </div>
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/nutrisari.jpg" alt="...">
+              <h5 class="card-title">Nutrisari<br>
+              Rp.6.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="nutrisari">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah11" placeholder="input jumlah">
+            </div>
+          </div>
+  
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="new menu/minuman taro.jpg" alt="...">
+              <h5 class="card-title">Taro<br>
+              Rp.13.000</h5>
+                <input class="form-check-input" type="checkbox" value="" id="minumantaro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Centang Untuk beli</label>
+                <input type="number" class="form-control" id="jumlah12" placeholder="input jumlah">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <a href="#popup1" class="btn"> Alamat</a>
+
+
+        <!-- pop up map starts -->
+    <div id="popup1" class="skinpop">
+      <div class="popup" id="popup">
+          <div class="p1">
+              <h6>cari alamat anda</h6>
+              <a href="#book" class="close" id="close">&times;</a>
+          </div>
+          <div class="p2">
+              <input id="searchInput"class="input-controls"type="text"placeholder="Enter a location">
+              <div class="map"id="map"style="width: 100%; height: 30rem;"></div>
+              <div class="map-area">
+                  <textarea type="text"name="location"id="location" placeholder="Alamat" cols="30" rows="10"></textarea>
+                  <input type="hidden"name="lat"id="lat" placeholder="Latitude">
+                  <input type="hidden"name="lng"id="lng" placeholder="Longitude">
+                  <a href="#book" class="btn" id="pilih" onclick="pilih()">pilih</a>
+             </div>
+          </div>
+      </div>
+  </div>
+  <!-- pop up map ends -->
+
+<!-- menu -->
+
+<!-- JS menu -->
+<script>
+  function cekout() {
+    var namaewa = document.getElementById("namamu").value;
+    var hpko = document.getElementById("nmrhp").value;
+    var item1=""; var item2=""; var item3="";var item4="";
+    var item5="";var item6=""; var item7=""; var item8="";
+    var item9="";var item10=""; var item11=""; var item12="";
+    var pobes = document.getElementById("poyowa").value;
+    var ms = document.getElementById("alamatleng").value;
+    
+    
+            
+    
+    if (nasigoreng.checked == true)
+    {
+      item1 = "Menu  : Nasi Goreng %0AJumlah : " + document.getElementById("nasigoreng").value +
+      "%0AHarga : " + document.getElementById("jumlah1").value *13000  +"%0A%0A";
+    }
+    if (nasikuning.checked == true)
+    {
+      item2 = "Menu  : Nasi Kuning %0AJumlah : " + document.getElementById("nasikuning").value +
+      "%0AHarga : " + document.getElementById("jumlah2").value *12000  +"%0A%0A";
+    }
+    if (miebakso.checked == true)
+    {
+      item3 = "Menu  : Mie Bakso %0AJumlah : " + document.getElementById("miebakso").value +
+      "%0AHarga : " + document.getElementById("jumlah3").value *13000  +"%0A%0A";
+    }
+    if (mieojo.checked == true)
+    {
+      item4 = "Menu  : Mie Ojo %0AJumlah : " + document.getElementById("mieojo").value +
+      "%0AHarga : " + document.getElementById("jumlah4").value *5000  +"%0A%0A";
+    }
+    if (ikansapi.checked == true)
+    {
+      item5 = "Menu  : Ikan Sapi %0AJumlah : " + document.getElementById("ikansapi").value +
+      "%0AHarga : " + document.getElementById("jumlah5").value *200000  +"%0A%0A";
+    }
+    if (ikanmujairbakar.checked == true)
+    {
+      item6 = "Menu  : Mujair Bakar %0AJumlah : " + document.getElementById("ikanmujairbakar").value +
+      "%0AHarga : " + document.getElementById("jumlah6").value *200000  +"%0A%0A";
+    }
+    if (sateayam.checked == true)
+    {
+      item7 = "Menu  : Sate Ayam %0AJumlah : " + document.getElementById("sateayam").value +
+      "%0AHarga : " + document.getElementById("jumlah7").value *200000  +"%0A%0A";
+    }
+    if (telursaus.checked == true)
+    {
+      item8 = "Menu  : Telur Saus %0AJumlah : " + document.getElementById("telursaus").value +
+      "%0AHarga : " + document.getElementById("jumlah8").value *150000  +"%0A%0A";
+    }
+    if (kopihitam.checked == true)
+    {
+      item9 = "Menu  : Kopi Hitam %0AJumlah : " + document.getElementById("kopihitam").value +
+      "%0AHarga : " + document.getElementById("jumlah9").value *5000  +"%0A%0A";
+    }
+    if (tehmanis.checked == true)
+    {
+      item10 = "Menu  : Teh Manis %0AJumlah : " + document.getElementById("tehmanis").value +
+      "%0AHarga : " + document.getElementById("jumlah10").value *5000  +"%0A%0A";
+    }
+    if (nutrisari.checked == true)
+    {
+      item11 = "Menu  : Nutrisari %0AJumlah : " + document.getElementById("nutrisari").value +
+      "%0AHarga : " + document.getElementById("jumlah11").value *6000  +"%0A%0A";
+    }
+    if (minumantaro.checked == true)
+    {
+      item12 = "Menu  : Taro %0AJumlah : " + document.getElementById("minumantaro").value +
+      "%0AHarga : " + document.getElementById("jumlah12").value *13000  +"%0A%0A";
+    }
+
+var url = "https://wa.me/6289695077563?text="  
++ "Nota pesanan" + "%0A%0A" 
++ "Nama : "     + namaewa + "%0A"
++ "Nomor Hp : "   + hpko + "%0A"
++ item1 + item2 +item3 +item4 +item5 +item6
++item7+ item8+ item9+ item10+ item11+ item12+ "%0A"
++ "Titik maps : "   + pobes + "%0A"
++ "Detail alamat : "   + ms; 
+window.open(url).focus();
+}
+</script>
+
+
+
+<!-- JS menu -->
+ 
+<!-- form pemesanan -->
+<div class="d-flex justify-content-around">
+  <div style="width: 60%;">
+    <div class="card-body"><br> 
+      <h5 class="card-title" style="color: white;">Form Pemesanan<br>
+      <h6 class="card-subtitle" style="color: white;">"Masukan Formulir Pemesanan Dengan Benar"</h6><br>
+      <form>
+        <div class="form-group" style="color: white;">
+          <label>Nama</label>
+          <input type="text" class="form-control" name="nama" id="namamu" placeholder="masukan nama" required>
+        </div>
+        <div class="form-group" style="color: white;">
+          <label>Nomor HP</label>
+          <input type="text" class="form-control" name="nomor" id="nmrhp" placeholder="masukan nomor hp" required>
+        </div>
+        <div class="form-group"style="color: white;">
+          <label>Titik Lokasi</label><br>
+          <textarea id="poyowa" rows="3" cols="106%" disabled></textarea>
+          <div id="map-canvas"></div>
+          
+        </div>
+      <div class="form-group"style="color: white;">
+        <label>Detail Alamat</label>
+        <input type="text" class="form-control" name="alamat" id="alamatleng"
+        placeholder="cth : bloc, gang, gedung, no.rumah " required>
+      </div>
+      <button type="button"class="btn btn-success"onclick="return cekout()">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        &nbsp;Cek Out Sekarang<br>&nbsp;</button>
+    </div>
+  </div>
+</div>
+<!-- form pemesanan -->
+
+ <!-- footer -->
+  <footer class="footer-ditributed" id="kontak" style="background: black;">
+    <div class="footer-left">
+        <img src="images/dapurlogo.png" alt="logo">
+        <h3>Dapur <span>Sodara</span></h3>
+        <p class="footer-company-name">&copy;2021 @dapursodara_website</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map"></i>
+            <a href="https://bit.ly/3vT6HdJ"><p>Jln.Purois, 
+              Poyowa Besar</p></a>
+          </div>
+        <div>
+            <i class="fa fa-whatsapp"></i>
+            <a href="https://wa.me/6281354821419?text=%20!">
+            <p>+62 813 5482 1409</p></a>
+        </div>
+        <div>
+            <i class="fa fa-facebook"></i>
+            <a href="https://www.facebook.com/wiwinmakalalag.makalalag">
+            <p>Wiwin Makalalag</p></a>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <a style="color: white;">   
+        Poyowa besar, Kotamobagu Selatan </a>
+        <iframe width="90%" height="auto" id="gmap_canvas" 
+        src="https://bit.ly/3JAh9Np">
+      </div>
+</footer>
+<!-- footer -->
+
+</body>
+
+
+<script>
+  function initialize() {
+     var latlng = new google.maps.LatLng(0.7243733, 124.3199316);
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: latlng,
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+        map: map,
+        position: latlng,
+        draggable: true,
+        anchorPoint: new google.maps.Point(0, -29)
+     });
+     
+      var input = document.getElementById('searchInput');
+      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+      var geocoder = new google.maps.Geocoder();
+      var autocomplete = new google.maps.places.Autocomplete(input);
+      autocomplete.bindTo('bounds', map);
+      var infowindow = new google.maps.InfoWindow();   
+      autocomplete.addListener('place_changed', function() {
+          infowindow.close();
+          marker.setVisible(false);
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+              window.alert("Autocomplete's returned place contains no geometry");
+              return;
+          }
+    
+          if (place.geometry.viewport) {
+              map.fitBounds(place.geometry.viewport);
+  
+          } else {
+              map.setCenter(place.geometry.location);
+              map.setZoom(17);
+          }
+         
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);          
+      
+          bindDataToForm(place.formatted_address,place.geometry.location.lat(),place.geometry.location.lng());
+          infowindow.setContent(place.formatted_address);
+          infowindow.open(map, marker);       
+      });
+      
+      google.maps.event.addListener(marker, 'dragend', function() {
+      geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        if (results[0]) {        
+            bindDataToForm(results[0].formatted_address,marker.getPosition().lat(),marker.getPosition().lng());
+            infowindow.setContent(results[0].formatted_address);
+            infowindow.open(map, marker);
+        }
+      }
+      });
+    });
+  }
+  function bindDataToForm(address,lat,lng){
+     document.getElementById('location').value = address;
+     document.getElementById('lat').value = lat;
+     document.getElementById('lng').value = lng;
+  
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  function pilih(){
+          var address = document.getElementById("address").value = document.getElementById("location").value + ", " + "Link Alamat = http://maps.google.com/maps?q=loc:" + document.getElementById("lat").value + "," + document.getElementById("lng").value;
+      }
+  </script>
+  
+
+
+ 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  
